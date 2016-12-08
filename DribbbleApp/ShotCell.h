@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ShotCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIView *wrapperView;
+@property (strong, nonatomic) IBOutlet UIImageView *userAvatarImageView;
 
 @end

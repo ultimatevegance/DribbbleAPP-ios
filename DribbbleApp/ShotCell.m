@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.wrapperView.layer.cornerRadius = 8;
+    self.userAvatarImageView.layer.cornerRadius = self.userAvatarImageView.frame.size.height / 2;
+    self.userAvatarImageView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
