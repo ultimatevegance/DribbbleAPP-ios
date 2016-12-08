@@ -36,8 +36,12 @@
     _segmentControl.frame = CGRectMake(0, 24, screenwith, 40);
     _segmentControl.titleTextAttributes = @{
                                              NSForegroundColorAttributeName : [UIColor colorWithRed:0.569 green:0.557 blue:0.600 alpha:1.00],
-                                             NSFontAttributeName : [UIFont fontWithName:@"Advent Pro" size:20.0f]
+                                             NSFontAttributeName : [UIFont fontWithName:@"Advent Pro" size:18.5f]
                                              };
+    _segmentControl.selectedTitleTextAttributes = @{
+                                                    NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                    NSFontAttributeName : [UIFont fontWithName:@"Advent Pro" size:20.0f]
+                                                    };
     _segmentControl.selectionIndicatorColor = [UIColor colorWithRed:0.349 green:0.824 blue:0.976 alpha:1.00];
     _segmentControl.backgroundColor = mainThemeColor;
     _segmentControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
@@ -46,7 +50,7 @@
     [self.view addSubview:_segmentControl];
     CGFloat segmentControlMaxY = CGRectGetHeight(_segmentControl.frame);
     self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, segmentControlMaxY + 24, screenwith, screenHight - segmentControlMaxY)];
-    self.scrollView.backgroundColor = [UIColor yellowColor];
+    self.scrollView.backgroundColor = mainThemeColor;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.contentSize = CGSizeMake(3 * screenwith, screenHight - segmentControlMaxY);
@@ -54,7 +58,7 @@
     [self.scrollView scrollRectToVisible:CGRectMake(screenwith, 0, screenwith, screenHight) animated:YES];
     [self.view addSubview:self.scrollView];
     
-    // add subview -setup tableviews
+    // add subviews -setup tableviews for future usage
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenwith, screenHight - segmentControlMaxY)];
     [self setApperanceForLabel:label1];
     label1.text = @"Worldwide";
@@ -71,6 +75,14 @@
     [self.scrollView addSubview:label3];
 
 
+    
+    
+}
+
+// todo setup tableviews
+- (void)setupScrollViewSubviews{
+    
+    
     
     
 }
