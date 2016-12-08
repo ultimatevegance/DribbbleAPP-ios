@@ -21,6 +21,7 @@
 		8D859E331DF6804D0049D80B /* DribbbleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E321DF6804D0049D80B /* DribbbleAppTests.m */; };
 		8D859E3E1DF6804D0049D80B /* DribbbleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E3D1DF6804D0049D80B /* DribbbleAppUITests.m */; };
 		8D859E5E1DF806410049D80B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D859E5D1DF806410049D80B /* QuartzCore.framework */; };
+		8DD8F4681DF9442A00F0EDA7 /* Dribbble.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DD8F4671DF9442A00F0EDA7 /* Dribbble.plist */; };
 		921118BFF24E238AD9027B7C /* libPods-DribbbleAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C3896CA409800F51A50D0A /* libPods-DribbbleAppTests.a */; };
 		E34C764E542D7182046FC801 /* libPods-DribbbleAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045498DCB2E2D3BF7D230455 /* libPods-DribbbleAppUITests.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		8D859E3F1DF6804D0049D80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D859E5D1DF806410049D80B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "advent-pro.regular.ttf"; sourceTree = "<group>"; };
+		8DD8F4671DF9442A00F0EDA7 /* Dribbble.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dribbble.plist; sourceTree = "<group>"; };
 		BB90F435692580C636D5DB02 /* Pods-DribbbleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BE8EFF162FE1361DEEB9DD40 /* Pods-DribbbleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAppTests/Pods-DribbbleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F24B027058577995F9CB3AA0 /* Pods-DribbbleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAppUITests/Pods-DribbbleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */,
 				8D859E161DF6804D0049D80B /* main.m */,
+				8DD8F4671DF9442A00F0EDA7 /* Dribbble.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			files = (
 				8D64061C1DF8EEBF00FB424A /* advent-pro.regular.ttf in Resources */,
 				8D859E281DF6804D0049D80B /* LaunchScreen.storyboard in Resources */,
+				8DD8F4681DF9442A00F0EDA7 /* Dribbble.plist in Resources */,
 				725B320A1DF726080053BEF0 /* ShotPostsCell.xib in Resources */,
 				8D859E251DF6804D0049D80B /* Assets.xcassets in Resources */,
 				8D859E231DF6804D0049D80B /* Main.storyboard in Resources */,

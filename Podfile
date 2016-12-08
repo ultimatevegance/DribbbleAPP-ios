@@ -11,6 +11,8 @@ target 'DribbbleApp' do
   pod 'Mantle'
   pod 'AFNetworking'
   pod 'HMSegmentedControl'
+  pod 'CBStoreHouseRefreshControl'
+  pod 'MJRefresh'
   target 'DribbbleAppTests' do
     inherit! :search_paths
     # Pods for testing

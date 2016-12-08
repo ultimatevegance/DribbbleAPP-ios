@@ -8,10 +8,15 @@
 
 #import "TrendViewController.h"
 #import "HMSegmentedControl.h"
+
+#define kScreenWidth CGRectGetWidth(self.view.frame)
+#define KScreenHight CGRectGetHeight(self.view.frame)
+#define AppThemeColorMain [UIColor colorWithRed:0.102 green:0.090 blue:0.125 alpha:1.00]
 @interface TrendViewController ()
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) HMSegmentedControl *segmentControl;
+
 @end
 
 @implementation TrendViewController
@@ -22,18 +27,15 @@
     [self setNeedsStatusBarAppearanceUpdate];
     [self _initialUIElements];
     
-    
 }
 
 - (void)_initialUIElements{
-    CGFloat screenwith = CGRectGetWidth(self.view.frame);
-    CGFloat screenHight = CGRectGetHeight(self.view.frame);
-    UIColor *mainThemeColor = [UIColor colorWithRed:0.102 green:0.090 blue:0.125 alpha:1.00];
-    self.segmentControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Trending",
+    self.segmentControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[
+                                @"Trending",
                                 @"Highlights",
                                 @"Popular"]];
     
-    _segmentControl.frame = CGRectMake(0, 24, screenwith, 40);
+    _segmentControl.frame = CGRectMake(0, 24, kScreenWidth, 40);
     _segmentControl.titleTextAttributes = @{
                                              NSForegroundColorAttributeName : [UIColor colorWithRed:0.569 green:0.557 blue:0.600 alpha:1.00],
                                              NSFontAttributeName : [UIFont fontWithName:@"Advent Pro" size:18.5f]
@@ -43,59 +45,50 @@
                                                     NSFontAttributeName : [UIFont fontWithName:@"Advent Pro" size:20.0f]
                                                     };
     _segmentControl.selectionIndicatorColor = [UIColor colorWithRed:0.349 green:0.824 blue:0.976 alpha:1.00];
-    _segmentControl.backgroundColor = mainThemeColor;
+    _segmentControl.backgroundColor = AppThemeColorMain;
     _segmentControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     _segmentControl.selectionIndicatorHeight = 2.0f;
     [_segmentControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentControl];
+    
+    __weak typeof(self) weakSelf = self;
+
+    [self.segmentControl setIndexChangeBlock:^(NSInteger index) {
+        [weakSelf.scrollView scrollRectToVisible:CGRectMake(kScreenWidth * index, 0, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height) animated:YES];
+    }];
+
     CGFloat segmentControlMaxY = CGRectGetHeight(_segmentControl.frame);
-    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, segmentControlMaxY + 24, screenwith, screenHight - segmentControlMaxY)];
-    self.scrollView.backgroundColor = mainThemeColor;
+    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, segmentControlMaxY + 24, kScreenWidth, KScreenHight - segmentControlMaxY)];
+    self.scrollView.backgroundColor = AppThemeColorMain;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.contentSize = CGSizeMake(3 * screenwith, screenHight - segmentControlMaxY);
+    self.scrollView.contentSize = CGSizeMake(3 * kScreenWidth, KScreenHight - segmentControlMaxY);
     self.scrollView.delegate = self;
-    [self.scrollView scrollRectToVisible:CGRectMake(screenwith, 0, screenwith, screenHight) animated:YES];
+    [self.scrollView scrollRectToVisible:CGRectMake(kScreenWidth, 0, kScreenWidth, KScreenHight) animated:YES];
     [self.view addSubview:self.scrollView];
     
-    // add subviews -setup tableviews for future usage
-    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenwith, screenHight - segmentControlMaxY)];
-    [self setApperanceForLabel:label1];
-    label1.text = @"Worldwide";
-    [self.scrollView addSubview:label1];
-    
-    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(screenwith, 0, screenwith, screenHight - segmentControlMaxY)];
-    [self setApperanceForLabel:label2];
-    label2.text = @"Local";
-    [self.scrollView addSubview:label2];
-    
-    UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(screenwith * 2, 0, screenwith, screenHight - segmentControlMaxY)];
-    [self setApperanceForLabel:label3];
-    label3.text = @"Headlines";
-    [self.scrollView addSubview:label3];
+    for (int i = 0; i < 3; i ++) {
+        UITableView *tableview = [[UITableView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth,KScreenHight - segmentControlMaxY) style:UITableViewStylePlain];
+        [self setApperanceForTableview:tableview];
+        tableview.delegate = self;
+        tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.scrollView addSubview:tableview];
+        
+    }
 
 
     
     
 }
 
-// todo setup tableviews
-- (void)setupScrollViewSubviews{
-    
-    
-    
-    
-}
+
 //test method
-- (void)setApperanceForLabel:(UILabel *)label {
+- (void)setApperanceForTableview:(UITableView *)tableview {
     CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
     CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
     UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-    label.backgroundColor = color;
-    label.textColor = [UIColor whiteColor];
-    label.font = [UIFont systemFontOfSize:21.0f];
-    label.textAlignment = NSTextAlignmentCenter;
+    tableview.backgroundColor = color;
 }
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
@@ -105,12 +98,33 @@
 {
 			 return UIStatusBarStyleLightContent;
 }
+
 #pragma mark - UIScrollViewDelegate
 - (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     CGFloat pageWidth = scrollView.frame.size.width;
     NSInteger page = scrollView.contentOffset.x / pageWidth;
     [self.segmentControl setSelectedSegmentIndex:page animated:YES];
 }
+
+
+#pragma mark - UITableViewDelegate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
