@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrendViewController : UIViewController <UIScrollViewDelegate ,UITableViewDelegate>
+@interface TrendViewController : UIViewController <UIScrollViewDelegate ,UITableViewDelegate,UITableViewDataSource>
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "TrendViewController.h"
 #import "HMSegmentedControl.h"
+#import "ShotCell.h"
 
 #define kScreenWidth CGRectGetWidth(self.view.frame)
 #define KScreenHight CGRectGetHeight(self.view.frame)
@@ -16,6 +17,7 @@
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) HMSegmentedControl *segmentControl;
+
 
 @end
 
@@ -71,7 +73,10 @@
         UITableView *tableview = [[UITableView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth,KScreenHight - segmentControlMaxY) style:UITableViewStylePlain];
         [self setApperanceForTableview:tableview];
         tableview.delegate = self;
+        tableview.dataSource = self;
         tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+        tableview.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, self.tabBarController.tabBar.frame.size.height + 20)];
+        [tableview registerNib:[UINib nibWithNibName:@"ShotCell" bundle:nil] forCellReuseIdentifier:@"ShotCell" ];
         [self.scrollView addSubview:tableview];
         
     }
@@ -108,12 +113,23 @@
 
 
 #pragma mark - UITableViewDelegate
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShotCell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.layer.cornerRadius = 10;
+    cell.backgroundColor = [UIColor yellowColor];
 
+    return cell;
+    
+}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
 
-
-
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 340;
+}
 
 
 
