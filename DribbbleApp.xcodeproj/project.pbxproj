@@ -10,6 +10,7 @@
 		1ABB0EE6F04DB0AC023B3F38 /* libPods-DribbbleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDED0CDE3DA535AA8581D9A /* libPods-DribbbleApp.a */; };
 		725B320A1DF726080053BEF0 /* ShotPostsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725B32091DF726080053BEF0 /* ShotPostsCell.xib */; };
 		725B320D1DF727D50053BEF0 /* ShotPostsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725B320C1DF727D50053BEF0 /* ShotPostsCell.m */; };
+		8D64061C1DF8EEBF00FB424A /* advent-pro.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */; };
 		8D859E171DF6804D0049D80B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E161DF6804D0049D80B /* main.m */; };
 		8D859E1A1DF6804D0049D80B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E191DF6804D0049D80B /* AppDelegate.m */; };
 		8D859E1D1DF6804D0049D80B /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E1C1DF6804D0049D80B /* TrendViewController.m */; };
@@ -372,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D64061C1DF8EEBF00FB424A /* advent-pro.regular.ttf in Resources */,
 				8D859E281DF6804D0049D80B /* LaunchScreen.storyboard in Resources */,
 				725B320A1DF726080053BEF0 /* ShotPostsCell.xib in Resources */,
 				8D859E251DF6804D0049D80B /* Assets.xcassets in Resources */,

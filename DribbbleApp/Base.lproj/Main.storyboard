@@ -14,7 +14,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="vkO-Ev-u3v" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="xHT-sH-kSd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QgN-QK-Sfs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QgN-QK-Sfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -41,6 +41,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Trend" image="Trend" badgeValue="1" selectedImage="Trend_selected" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="8ha-1S-FBs"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -52,7 +53,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="PSy-D6-Igo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="uxk-PH-6yQ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="68B-yF-jqY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="68B-yF-jqY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -111,7 +112,7 @@
             <objects>
                 <navigationController id="AtV-dg-baR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="aUc-1y-zfw"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Crm-RA-yED">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Crm-RA-yED">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
