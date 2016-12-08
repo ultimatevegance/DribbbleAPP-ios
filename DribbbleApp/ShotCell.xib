@@ -84,7 +84,9 @@
                 <constraints>
                     <constraint firstItem="kWQ-OA-hXL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MIw-m1-TCR"/>
                     <constraint firstAttribute="topMargin" secondItem="kWQ-OA-hXL" secondAttribute="top" id="d7q-55-S7u"/>
-                    <constraint firstItem="kWQ-OA-hXL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="1" id="iCA-Af-Qg4"/>
+                    <constraint firstItem="kWQ-OA-hXL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="1" id="iCA-Af-Qg4">
+                        <variation key="widthClass=regular" constant="30"/>
+                    </constraint>
                     <constraint firstAttribute="bottomMargin" secondItem="kWQ-OA-hXL" secondAttribute="bottom" id="nyw-Qi-ZQL"/>
                     <constraint firstItem="kWQ-OA-hXL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oxM-zt-vYy"/>
                 </constraints>
