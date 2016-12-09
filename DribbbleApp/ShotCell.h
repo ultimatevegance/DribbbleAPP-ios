@@ -11,5 +11,6 @@
 @interface ShotCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIView *wrapperView;
 @property (strong, nonatomic) IBOutlet UIImageView *userAvatarImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *shotImageView;
 
 @end
