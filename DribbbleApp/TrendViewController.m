@@ -34,8 +34,8 @@
 - (void)_initialUIElements{
     self.segmentControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[
                                 @"Trending",
-                                @"Highlights",
-                                @"Popular"]];
+                                @"Popular",
+                                @"Gifs"]];
     
     _segmentControl.frame = CGRectMake(0, 24, kScreenWidth, 40);
     _segmentControl.titleTextAttributes = @{
