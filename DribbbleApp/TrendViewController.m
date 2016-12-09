@@ -106,8 +106,9 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
     CGFloat pageWidth = scrollView.frame.size.width;
-    NSInteger page = scrollView.contentOffset.x / pageWidth;
+    NSInteger page = self.scrollView.contentOffset.x / pageWidth;
     [self.segmentControl setSelectedSegmentIndex:page animated:YES];
 }
 
