@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) HMSegmentedControl *segmentControl;
-
+@property (nonatomic, strong) NSMutableArray *columns;
 
 @end
 
@@ -33,10 +33,8 @@
 }
 
 - (void)_initialUIElements{
-    self.segmentControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[
-                                @"Trending",
-                                @"Popular",
-                                @"Gifs"]];
+    self.columns = [NSMutableArray arrayWithObjects:@"Trending",@"Popular",@"Gifs", nil];
+    self.segmentControl = [[HMSegmentedControl alloc] initWithSectionTitles:self.columns];
     
     _segmentControl.frame = CGRectMake(0, 24, kScreenWidth, 40);
     _segmentControl.titleTextAttributes = @{
@@ -73,7 +71,6 @@
     
     for (int i = 0; i < 3; i ++) {
         UITableView *tableview = [[UITableView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth,KScreenHight - segmentControlMaxY) style:UITableViewStylePlain];
-//        [self setApperanceForTableview:tableview];
         tableview.delegate = self;
         tableview.dataSource = self;
         tableview.backgroundColor = AppThemeColorMain;
@@ -81,7 +78,7 @@
         tableview.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, self.tabBarController.tabBar.frame.size.height + 20)];
         [tableview registerNib:[UINib nibWithNibName:@"ShotCell" bundle:nil] forCellReuseIdentifier:@"ShotCell" ];
         [self.scrollView addSubview:tableview];
-        
+        tableview.tag = 1000 + i;
         MSRereshGifHeader *header = [MSRereshGifHeader headerWithRefreshingBlock:^{
             // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -99,7 +96,6 @@
         tableview.mj_header = header;
         
         
-
     }
 
 
