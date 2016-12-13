@@ -10,6 +10,7 @@
 #import "HMSegmentedControl.h"
 #import "ShotCell.h"
 #import "MJRefresh.h"
+#import "MSRereshGifHeader.h"
 #define kScreenWidth CGRectGetWidth(self.view.frame)
 #define KScreenHight CGRectGetHeight(self.view.frame)
 #define AppThemeColorMain [UIColor colorWithRed:0.102 green:0.090 blue:0.125 alpha:1.00]
@@ -80,9 +81,10 @@
         tableview.tableFooterView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, self.tabBarController.tabBar.frame.size.height + 20)];
         [tableview registerNib:[UINib nibWithNibName:@"ShotCell" bundle:nil] forCellReuseIdentifier:@"ShotCell" ];
         [self.scrollView addSubview:tableview];
-        tableview.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        MSRereshGifHeader *header = [MSRereshGifHeader headerWithRefreshingBlock:^{
             // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 //refresh data method
                 
                 
@@ -90,7 +92,15 @@
                 // 结束刷新
                 [tableview.mj_header endRefreshing];
             });
-        }];    }
+
+        }];
+        header.lastUpdatedTimeLabel.hidden = YES;
+        header.stateLabel.hidden = YES;
+        tableview.mj_header = header;
+        
+        
+
+    }
 
 
     
@@ -108,7 +118,7 @@
 //}
 - (void)refreshData{
     
-    
+   [NSThread sleepForTimeInterval:2.0];
     
 }
 

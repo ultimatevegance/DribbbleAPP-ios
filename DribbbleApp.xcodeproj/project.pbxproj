@@ -11,6 +11,7 @@
 		7293F3941DF9A4C000DD97B9 /* ShotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293F3921DF9A4C000DD97B9 /* ShotCell.m */; };
 		7293F3951DF9A4C000DD97B9 /* ShotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7293F3931DF9A4C000DD97B9 /* ShotCell.xib */; };
 		8D64061C1DF8EEBF00FB424A /* advent-pro.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */; };
+		8D6A98951DFFC665002CB611 /* MSRereshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A98941DFFC665002CB611 /* MSRereshGifHeader.m */; };
 		8D859E171DF6804D0049D80B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E161DF6804D0049D80B /* main.m */; };
 		8D859E1A1DF6804D0049D80B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E191DF6804D0049D80B /* AppDelegate.m */; };
 		8D859E1D1DF6804D0049D80B /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E1C1DF6804D0049D80B /* TrendViewController.m */; };
@@ -53,6 +54,8 @@
 		7293F3921DF9A4C000DD97B9 /* ShotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCell.m; sourceTree = "<group>"; };
 		7293F3931DF9A4C000DD97B9 /* ShotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotCell.xib; sourceTree = "<group>"; };
 		84C3896CA409800F51A50D0A /* libPods-DribbbleAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbbleAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6A98931DFFC665002CB611 /* MSRereshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRereshGifHeader.h; sourceTree = "<group>"; };
+		8D6A98941DFFC665002CB611 /* MSRereshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSRereshGifHeader.m; sourceTree = "<group>"; };
 		8D859E121DF6804D0049D80B /* DribbbleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D859E161DF6804D0049D80B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D859E181DF6804D0049D80B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				7293F3911DF9A4C000DD97B9 /* ShotCell.h */,
 				7293F3921DF9A4C000DD97B9 /* ShotCell.m */,
 				7293F3931DF9A4C000DD97B9 /* ShotCell.xib */,
+				8D6A98931DFFC665002CB611 /* MSRereshGifHeader.h */,
+				8D6A98941DFFC665002CB611 /* MSRereshGifHeader.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -533,6 +538,7 @@
 				8D859E1A1DF6804D0049D80B /* AppDelegate.m in Sources */,
 				8D859E1D1DF6804D0049D80B /* TrendViewController.m in Sources */,
 				7293F3941DF9A4C000DD97B9 /* ShotCell.m in Sources */,
+				8D6A98951DFFC665002CB611 /* MSRereshGifHeader.m in Sources */,
 				8D859E171DF6804D0049D80B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
