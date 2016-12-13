@@ -23,15 +23,15 @@
     
     // 设置普通状态的动画图片
     NSMutableArray *idleImages = [NSMutableArray array];
-    for (NSUInteger i = 1; i<=9; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"circle_loading0%zd", i]];
+    for (NSUInteger i = 1; i<=40; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"circle_loading%zd", i]];
         [idleImages addObject:image];
     }
     [self setImages:idleImages forState:MJRefreshStateIdle];
     
     // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
     NSMutableArray *refreshingImages = [NSMutableArray array];
-    for (NSUInteger i = 10; i<=40; i++) {
+    for (NSUInteger i = 41; i<=82; i++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"circle_loading%zd", i]];
         [refreshingImages addObject:image];
     }
@@ -39,7 +39,7 @@
     
     // 设置正在刷新状态的动画图片
     NSMutableArray *onRefreshingImages = [NSMutableArray array];
-    for (NSUInteger i = 41; i<=73; i++) {
+    for (NSUInteger i = 41; i<=82; i++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"circle_loading%zd", i]];
         [refreshingImages addObject:image];
     }
