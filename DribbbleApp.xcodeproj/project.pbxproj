@@ -15,13 +15,15 @@
 		8D859E171DF6804D0049D80B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E161DF6804D0049D80B /* main.m */; };
 		8D859E1A1DF6804D0049D80B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E191DF6804D0049D80B /* AppDelegate.m */; };
 		8D859E1D1DF6804D0049D80B /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E1C1DF6804D0049D80B /* TrendViewController.m */; };
-		8D859E201DF6804D0049D80B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E1F1DF6804D0049D80B /* SecondViewController.m */; };
+		8D859E201DF6804D0049D80B /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E1F1DF6804D0049D80B /* DiscoverViewController.m */; };
 		8D859E231DF6804D0049D80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E211DF6804D0049D80B /* Main.storyboard */; };
 		8D859E251DF6804D0049D80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E241DF6804D0049D80B /* Assets.xcassets */; };
 		8D859E281DF6804D0049D80B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E261DF6804D0049D80B /* LaunchScreen.storyboard */; };
 		8D859E331DF6804D0049D80B /* DribbbleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E321DF6804D0049D80B /* DribbbleAppTests.m */; };
 		8D859E3E1DF6804D0049D80B /* DribbbleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D859E3D1DF6804D0049D80B /* DribbbleAppUITests.m */; };
 		8D859E5E1DF806410049D80B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D859E5D1DF806410049D80B /* QuartzCore.framework */; };
+		8D868F371E01438B00FC41BE /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D868F351E01438B00FC41BE /* UserCell.m */; };
+		8D868F381E01438B00FC41BE /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D868F361E01438B00FC41BE /* UserCell.xib */; };
 		8DD8F4681DF9442A00F0EDA7 /* Dribbble.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DD8F4671DF9442A00F0EDA7 /* Dribbble.plist */; };
 		921118BFF24E238AD9027B7C /* libPods-DribbbleAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C3896CA409800F51A50D0A /* libPods-DribbbleAppTests.a */; };
 		E34C764E542D7182046FC801 /* libPods-DribbbleAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045498DCB2E2D3BF7D230455 /* libPods-DribbbleAppUITests.a */; };
@@ -62,8 +64,8 @@
 		8D859E191DF6804D0049D80B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8D859E1B1DF6804D0049D80B /* TrendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendViewController.h; sourceTree = "<group>"; };
 		8D859E1C1DF6804D0049D80B /* TrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrendViewController.m; sourceTree = "<group>"; };
-		8D859E1E1DF6804D0049D80B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		8D859E1F1DF6804D0049D80B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		8D859E1E1DF6804D0049D80B /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		8D859E1F1DF6804D0049D80B /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		8D859E221DF6804D0049D80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D859E241DF6804D0049D80B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D859E271DF6804D0049D80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,9 @@
 		8D859E3F1DF6804D0049D80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D859E5D1DF806410049D80B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "advent-pro.regular.ttf"; sourceTree = "<group>"; };
+		8D868F341E01438B00FC41BE /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		8D868F351E01438B00FC41BE /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		8D868F361E01438B00FC41BE /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		8DD8F4671DF9442A00F0EDA7 /* Dribbble.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dribbble.plist; sourceTree = "<group>"; };
 		BB90F435692580C636D5DB02 /* Pods-DribbbleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BE8EFF162FE1361DEEB9DD40 /* Pods-DribbbleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAppTests/Pods-DribbbleAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,8 +249,8 @@
 		8D859E591DF7EE090049D80B /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				8D859E1E1DF6804D0049D80B /* SecondViewController.h */,
-				8D859E1F1DF6804D0049D80B /* SecondViewController.m */,
+				8D868F331E01419200FC41BE /* Views */,
+				8D868F321E01417800FC41BE /* Controllers */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -262,6 +267,25 @@
 			children = (
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		8D868F321E01417800FC41BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D859E1F1DF6804D0049D80B /* DiscoverViewController.m */,
+				8D859E1E1DF6804D0049D80B /* DiscoverViewController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8D868F331E01419200FC41BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D868F341E01438B00FC41BE /* UserCell.h */,
+				8D868F351E01438B00FC41BE /* UserCell.m */,
+				8D868F361E01438B00FC41BE /* UserCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +411,7 @@
 				8DD8F4681DF9442A00F0EDA7 /* Dribbble.plist in Resources */,
 				8D859E251DF6804D0049D80B /* Assets.xcassets in Resources */,
 				8D859E231DF6804D0049D80B /* Main.storyboard in Resources */,
+				8D868F381E01438B00FC41BE /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,11 +559,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D859E201DF6804D0049D80B /* SecondViewController.m in Sources */,
+				8D859E201DF6804D0049D80B /* DiscoverViewController.m in Sources */,
 				8D859E1A1DF6804D0049D80B /* AppDelegate.m in Sources */,
 				8D859E1D1DF6804D0049D80B /* TrendViewController.m in Sources */,
 				7293F3941DF9A4C000DD97B9 /* ShotCell.m in Sources */,
 				8D6A98951DFFC665002CB611 /* MSRereshGifHeader.m in Sources */,
+				8D868F371E01438B00FC41BE /* UserCell.m in Sources */,
 				8D859E171DF6804D0049D80B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
