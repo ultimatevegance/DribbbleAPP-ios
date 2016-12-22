@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1ABB0EE6F04DB0AC023B3F38 /* libPods-DribbbleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDED0CDE3DA535AA8581D9A /* libPods-DribbbleApp.a */; };
+		721472B11E0453F400BA2121 /* MSShotData.m in Sources */ = {isa = PBXBuildFile; fileRef = 721472B01E0453F400BA2121 /* MSShotData.m */; };
+		721472B41E0454B000BA2121 /* MSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 721472B31E0454B000BA2121 /* MSUser.m */; };
 		7293F3941DF9A4C000DD97B9 /* ShotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293F3921DF9A4C000DD97B9 /* ShotCell.m */; };
 		7293F3951DF9A4C000DD97B9 /* ShotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7293F3931DF9A4C000DD97B9 /* ShotCell.xib */; };
 		8D64061C1DF8EEBF00FB424A /* advent-pro.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */; };
@@ -52,6 +54,10 @@
 		430AB9F8AB0D5C52D0A46F00 /* Pods-DribbbleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleAppUITests/Pods-DribbbleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5CDED0CDE3DA535AA8581D9A /* libPods-DribbbleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbbleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70288AD39950DB7A1D362A3B /* Pods-DribbbleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DribbbleApp/Pods-DribbbleApp.release.xcconfig"; sourceTree = "<group>"; };
+		721472AF1E0453F400BA2121 /* MSShotData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSShotData.h; sourceTree = "<group>"; };
+		721472B01E0453F400BA2121 /* MSShotData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSShotData.m; sourceTree = "<group>"; };
+		721472B21E0454B000BA2121 /* MSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUser.h; sourceTree = "<group>"; };
+		721472B31E0454B000BA2121 /* MSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUser.m; sourceTree = "<group>"; };
 		7293F3911DF9A4C000DD97B9 /* ShotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCell.h; sourceTree = "<group>"; };
 		7293F3921DF9A4C000DD97B9 /* ShotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCell.m; sourceTree = "<group>"; };
 		7293F3931DF9A4C000DD97B9 /* ShotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotCell.xib; sourceTree = "<group>"; };
@@ -242,6 +248,10 @@
 		8D859E4E1DF6BA020049D80B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				721472AF1E0453F400BA2121 /* MSShotData.h */,
+				721472B01E0453F400BA2121 /* MSShotData.m */,
+				721472B21E0454B000BA2121 /* MSUser.h */,
+				721472B31E0454B000BA2121 /* MSUser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -566,6 +576,8 @@
 				8D6A98951DFFC665002CB611 /* MSRereshGifHeader.m in Sources */,
 				8D868F371E01438B00FC41BE /* UserCell.m in Sources */,
 				8D859E171DF6804D0049D80B /* main.m in Sources */,
+				721472B41E0454B000BA2121 /* MSUser.m in Sources */,
+				721472B11E0453F400BA2121 /* MSShotData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
