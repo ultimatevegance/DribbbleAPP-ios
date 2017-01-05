@@ -7,8 +7,22 @@
 //
 
 #import "ShotCell.h"
-
+#import "MSShotData.h"
+#import "UIImageView+YYWebImage.h"
 @implementation ShotCell
+
+- (void)setShotData:(MSShotData *)shotData {
+    _shotData = shotData;
+    _titleLabel.text = _shotData.title;
+    _userNameLabel.text = _shotData.userName;
+    [_userAvatarImageView yy_setImageWithURL:[NSURL URLWithString:_shotData.avatarImageUrl] placeholder:[UIImage imageNamed:@"defaultAvatar"]];
+    //TODO: 先使用normal的图片 然后下载完HIPI的图片后将图片换成高清的图片；
+    [_shotImageView yy_setImageWithURL:[NSURL URLWithString:_shotData.shotImageNormalUrl] placeholder:nil];
+    _viewCountLabel.text = _shotData.viewsCount;
+    _likesCountLabel.text = _shotData.likesCount;
+    _commentsCountLabel.text = _shotData.commentsCount;
+
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

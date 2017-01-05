@@ -10,6 +10,7 @@
 		1ABB0EE6F04DB0AC023B3F38 /* libPods-DribbbleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDED0CDE3DA535AA8581D9A /* libPods-DribbbleApp.a */; };
 		721472B11E0453F400BA2121 /* MSShotData.m in Sources */ = {isa = PBXBuildFile; fileRef = 721472B01E0453F400BA2121 /* MSShotData.m */; };
 		721472B41E0454B000BA2121 /* MSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 721472B31E0454B000BA2121 /* MSUser.m */; };
+		724976CD1E1EA51400F84CDD /* MSTAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 724976CC1E1EA51400F84CDD /* MSTAPIManager.m */; };
 		7293F3941DF9A4C000DD97B9 /* ShotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293F3921DF9A4C000DD97B9 /* ShotCell.m */; };
 		7293F3951DF9A4C000DD97B9 /* ShotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7293F3931DF9A4C000DD97B9 /* ShotCell.xib */; };
 		8D64061C1DF8EEBF00FB424A /* advent-pro.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D859E5F1DF819600049D80B /* advent-pro.regular.ttf */; };
@@ -58,6 +59,8 @@
 		721472B01E0453F400BA2121 /* MSShotData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSShotData.m; sourceTree = "<group>"; };
 		721472B21E0454B000BA2121 /* MSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUser.h; sourceTree = "<group>"; };
 		721472B31E0454B000BA2121 /* MSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUser.m; sourceTree = "<group>"; };
+		724976CB1E1EA51400F84CDD /* MSTAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTAPIManager.h; sourceTree = "<group>"; };
+		724976CC1E1EA51400F84CDD /* MSTAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTAPIManager.m; sourceTree = "<group>"; };
 		7293F3911DF9A4C000DD97B9 /* ShotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCell.h; sourceTree = "<group>"; };
 		7293F3921DF9A4C000DD97B9 /* ShotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCell.m; sourceTree = "<group>"; };
 		7293F3931DF9A4C000DD97B9 /* ShotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShotCell.xib; sourceTree = "<group>"; };
@@ -146,6 +149,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		724976CE1E1EAE4E00F84CDD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8D859E5B1DF7EF180049D80B /* Networking */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		8D859E091DF6804D0049D80B = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +184,7 @@
 			children = (
 				8D859E181DF6804D0049D80B /* AppDelegate.h */,
 				8D859E191DF6804D0049D80B /* AppDelegate.m */,
-				8D859E5B1DF7EF180049D80B /* Networking */,
+				724976CE1E1EAE4E00F84CDD /* Tools */,
 				8D859E4B1DF6B98E0049D80B /* Trend */,
 				8D859E591DF7EE090049D80B /* Discover */,
 				8D859E5A1DF7EE2D0049D80B /* You */,
@@ -275,6 +286,8 @@
 		8D859E5B1DF7EF180049D80B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				724976CB1E1EA51400F84CDD /* MSTAPIManager.h */,
+				724976CC1E1EA51400F84CDD /* MSTAPIManager.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -570,6 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D859E201DF6804D0049D80B /* DiscoverViewController.m in Sources */,
+				724976CD1E1EA51400F84CDD /* MSTAPIManager.m in Sources */,
 				8D859E1A1DF6804D0049D80B /* AppDelegate.m in Sources */,
 				8D859E1D1DF6804D0049D80B /* TrendViewController.m in Sources */,
 				7293F3941DF9A4C000DD97B9 /* ShotCell.m in Sources */,

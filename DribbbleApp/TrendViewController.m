@@ -9,8 +9,11 @@
 #import "TrendViewController.h"
 #import "HMSegmentedControl.h"
 #import "ShotCell.h"
+#import "MSShotData.h"
 #import "MJRefresh.h"
 #import "MSRereshGifHeader.h"
+#import "MSShotData.h"
+
 #define kScreenWidth CGRectGetWidth(self.view.frame)
 #define KScreenHight CGRectGetHeight(self.view.frame)
 #define AppThemeColorMain [UIColor colorWithRed:0.102 green:0.090 blue:0.125 alpha:1.00]
@@ -19,6 +22,7 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) HMSegmentedControl *segmentControl;
 @property (nonatomic, strong) NSMutableArray *columns;
+@property (nonatomic, strong) NSArray *dataSource;
 
 @end
 
@@ -29,9 +33,13 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     [self _initialUIElements];
+    [self requestShotData ];
     
 }
 
+- (void)requestShotData {
+    
+}
 - (void)_initialUIElements{
     self.columns = [NSMutableArray arrayWithObjects:@"Trending",@"Popular",@"Gifs", nil];
     self.segmentControl = [[HMSegmentedControl alloc] initWithSectionTitles:self.columns];
